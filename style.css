@@ -1,0 +1,158 @@
+/* inter-regular - latin */
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./fonts/inter-v2-latin-regular.eot'); /* IE9 Compat Modes */
+    src: local(''),
+         url('./fonts/inter-v2-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('./fonts/inter-v2-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('./fonts/inter-v2-latin-regular.woff') format('woff'), /* Modern Browsers */
+         url('./fonts/inter-v2-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('./fonts/inter-v2-latin-regular.svg#Inter') format('svg'); /* Legacy iOS */
+  }
+  /* inter-700 - latin */
+  @font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    src: url('./fonts/inter-v2-latin-700.eot'); /* IE9 Compat Modes */
+    src: local(''),
+         url('./fonts/inter-v2-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('./fonts/inter-v2-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+         url('./fonts/inter-v2-latin-700.woff') format('woff'), /* Modern Browsers */
+         url('./fonts/inter-v2-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('./fonts/inter-v2-latin-700.svg#Inter') format('svg'); /* Legacy iOS */
+  }
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 14px;
+}
+
+body {
+    font-family: Inter, Arial, sans-serif;
+    color: hsl(228, 34%, 66%);
+    min-height: 100vh;
+    background-color: hsl(230, 17%, 14%);
+}
+
+#grid-container {
+    min-height: 98vh;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: 250px 250px 250px 250px;
+    grid-template-rows: 80px 230px 50px 130px 130px;
+    column-gap: 30px;
+    row-gap: 25px;
+    justify-content: center;
+    align-content: center;
+    /* grid-template-areas:
+                        "header header header header"
+                        "fb-followers tw-followers ig-followers yt-subscr"
+                        "h-ow h-ow h-ow h-ow"
+                        "fb-views fb-likes ig-likes ig-p-views" 
+                        "tw-retweets tw-likes yt-likes yt-tot-views"
+                        ; */
+}
+
+#grid-container > header {
+    grid-row: 1;
+    grid-column: 1 / span 4;
+}
+
+#grid-container > header > h1 {
+    color: #fff;
+}
+
+#theme-switch {
+    float: right;
+}
+
+article {
+    background-color: hsl(228, 28%, 20%);
+}
+
+.followers-box {
+    text-align: center;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.number {
+    color: #fff;
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+.category {
+    letter-spacing: .3rem;
+    text-transform: uppercase;
+}
+
+.change {
+    font-weight: bold;
+    margin-top: 1.7rem;
+}
+
+.increase {
+    color: hsl(163, 72%, 41%);
+}
+
+.decrease {
+    color: hsl(356, 69%, 56%);
+}
+
+.img_name {
+    margin: 1rem auto 1.7rem auto;
+}
+
+.img_name > img {
+    vertical-align: middle;
+}
+
+.img_name > span {
+    margin-left: .8rem;
+    font-weight: bold;
+    vertical-align: middle;
+}
+
+
+
+/* BORDERS */
+
+#fb-followers{
+    border-top: 5px solid hsl(208, 92%, 53%)
+}
+
+#tw-followers {
+    border-top: 5px solid hsl(203, 89%, 53%);
+}
+
+#ig-followers {
+
+}
+
+#yt-subscr {
+
+}
+
+h2 {
+    grid-row: 3;
+    grid-column: 1 / span 4;
+    color: #fff;
+}
+
+footer {
+    font-size: 11px; text-align: center;
+}
+footer a {
+    color: hsl(228, 45%, 44%);
+}
