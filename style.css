@@ -124,7 +124,9 @@ article {
     vertical-align: middle;
 }
 
-
+.change > img, .change > span {
+    vertical-align: middle;
+}
 
 /* BORDERS */
 
@@ -137,18 +139,53 @@ article {
 }
 
 #ig-followers {
-
+    border-top: 5px solid hsl(329, 70%, 58%);
+    /* border-top-style: solid;
+    border-image-source: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+    border-image-slice: 5 0 0 0; */
 }
 
 #yt-subscr {
-
+    border-top: 5px solid hsl(348, 97%, 39%)
 }
 
 h2 {
     grid-row: 3;
     grid-column: 1 / span 4;
     color: #fff;
+    align-self: end;
+    font-size: 1.8rem;
 }
+
+.today-box {
+    border-radius: 5px;
+    padding: 2rem;
+}
+
+.top-row img {
+    float: right;
+}
+
+.bottom-row {
+    margin-top: 1.7rem;
+}
+
+.bottom-row > div > img, .bottom-row > div > span {
+    vertical-align: middle;
+}
+
+.bottom-row > span {
+    color: #fff;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.bottom-row > div {
+    margin-top: 1.3rem;
+    display: inline-block;
+    float: right;
+}
+
 
 footer {
     font-size: 11px; text-align: center;
