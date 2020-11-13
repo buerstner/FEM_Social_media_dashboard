@@ -1,3 +1,5 @@
+/* ---------------------------------------------- */
+/* FONTS */
 /* inter-regular - latin */
 @font-face {
     font-family: 'Inter';
@@ -25,6 +27,8 @@
          url('./fonts/inter-v2-latin-700.svg#Inter') format('svg'); /* Legacy iOS */
   }
 
+/* ---------------------------------------------- */
+/* GENERAL */
 
 * {
     margin: 0;
@@ -39,14 +43,24 @@ html {
 body {
     font-family: Inter, Arial, sans-serif;
     color: hsl(228, 34%, 66%);
+    font-weight: bold;
     min-height: 100vh;
     background-color: hsl(230, 17%, 14%);
 }
 
+.increase {
+    color: hsl(163, 72%, 41%);
+}
+
+.decrease {
+    color: hsl(356, 69%, 56%);
+}
+
+/* ---------------------------------------------- */
+/* GRID ADJUSTMENT */
+
 #grid-container {
     min-height: 98vh;
-    margin-left: auto;
-    margin-right: auto;
     display: grid;
     grid-template-columns: 250px 250px 250px 250px;
     grid-template-rows: 80px 230px 50px 130px 130px;
@@ -54,19 +68,15 @@ body {
     row-gap: 25px;
     justify-content: center;
     align-content: center;
-    /* grid-template-areas:
-                        "header header header header"
-                        "fb-followers tw-followers ig-followers yt-subscr"
-                        "h-ow h-ow h-ow h-ow"
-                        "fb-views fb-likes ig-likes ig-p-views" 
-                        "tw-retweets tw-likes yt-likes yt-tot-views"
-                        ; */
 }
 
 #grid-container > header {
     grid-row: 1;
     grid-column: 1 / span 4;
 }
+
+/* ---------------------------------------------- */
+/* HEADLINE */
 
 #grid-container > header > h1 {
     color: #fff;
@@ -76,11 +86,11 @@ body {
     float: right;
 }
 
-article {
-    background-color: hsl(228, 28%, 20%);
-}
+/* ---------------------------------------------- */
+/* MAIN BOXES */
 
 .followers-box {
+    background-color: hsl(228, 28%, 20%);
     text-align: center;
     padding: 1rem;
     border-radius: 5px;
@@ -93,6 +103,7 @@ article {
 }
 
 .category {
+    font-weight: normal;
     letter-spacing: .3rem;
     text-transform: uppercase;
 }
@@ -102,16 +113,9 @@ article {
     margin-top: 1.7rem;
 }
 
-.increase {
-    color: hsl(163, 72%, 41%);
-}
-
-.decrease {
-    color: hsl(356, 69%, 56%);
-}
-
 .img_name {
     margin: 1rem auto 1.7rem auto;
+    height: 20.2px;
 }
 
 .img_name > img {
@@ -128,26 +132,40 @@ article {
     vertical-align: middle;
 }
 
-/* BORDERS */
+/* BORDER STYLING */
 
 #fb-followers{
-    border-top: 5px solid hsl(208, 92%, 53%)
+    border-top: 4px solid hsl(208, 92%, 53%)
 }
 
 #tw-followers {
-    border-top: 5px solid hsl(203, 89%, 53%);
+    border-top: 4px solid hsl(203, 89%, 53%);
 }
 
 #ig-followers {
-    border-top: 5px solid hsl(329, 70%, 58%);
-    /* border-top-style: solid;
-    border-image-source: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
-    border-image-slice: 5 0 0 0; */
+    background-image: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+    position: relative;
+}
+
+#overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 226px;
+    background-color:  hsl(228, 28%, 20%);
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    padding: 1rem;
 }
 
 #yt-subscr {
-    border-top: 5px solid hsl(348, 97%, 39%)
+    border-top: 4px solid hsl(348, 97%, 39%)
 }
+
+
+/* ---------------------------------------------- */
+/* SECTION OVERVIEW - TODAY */
 
 h2 {
     grid-row: 3;
@@ -158,6 +176,7 @@ h2 {
 }
 
 .today-box {
+    background-color: hsl(228, 28%, 20%);
     border-radius: 5px;
     padding: 2rem;
 }
@@ -182,10 +201,11 @@ h2 {
 
 .bottom-row > div {
     margin-top: 1.3rem;
-    display: inline-block;
     float: right;
 }
 
+/* ---------------------------------------------- */
+/* FOOTER */
 
 footer {
     font-size: 11px; text-align: center;
