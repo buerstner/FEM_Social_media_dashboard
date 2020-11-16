@@ -101,7 +101,7 @@ body {
 }
 
 #switch-box {
-    height: 26px;
+    height: 27px;
     width: 50px; 
     border-radius: 13px;
     background-image: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
@@ -119,6 +119,7 @@ body {
     top: 3.5px;
     left: 3px;
     transition: left .3s;
+    cursor: pointer;
 }
 
 #switch-box input:checked + #switch-dot {
@@ -137,6 +138,10 @@ body {
     text-align: center;
     padding: 1rem;
     border-radius: 5px;
+}
+
+.followers-box:hover {
+    background-color: hsl(228, 17%, 20%);
 }
 
 .number {
@@ -202,6 +207,10 @@ body {
     padding: 1rem;
 }
 
+#overlay:hover {
+    background-color: hsl(228, 17%, 20%);
+}
+
 #yt-subscr {
     border-top: 4px solid hsl(348, 97%, 39%)
 }
@@ -222,6 +231,10 @@ h2 {
     background-color: hsl(228, 28%, 20%);
     border-radius: 5px;
     padding: 2rem;
+}
+
+.today-box:hover {
+    background-color: hsl(228, 17%, 20%);
 }
 
 .top-row img {
