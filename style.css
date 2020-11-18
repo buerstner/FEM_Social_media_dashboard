@@ -46,6 +46,7 @@ body {
     font-weight: bold;
     min-height: 100vh;
     background-color: hsl(230, 17%, 14%);
+    position: relative;
 }
 
 .increase {
@@ -54,6 +55,16 @@ body {
 
 .decrease {
     color: hsl(356, 69%, 56%);
+}
+
+#top-bg-pattern {
+    width: 100%;
+    height: 30%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: hsl(232, 19%, 15%);
+    z-index: -1;
 }
 
 /* ---------------------------------------------- */
@@ -141,7 +152,7 @@ body {
 }
 
 .followers-box:hover {
-    background-color: hsl(228, 17%, 20%);
+    background-color: hsl(228, 17%, 18%);
 }
 
 .number {

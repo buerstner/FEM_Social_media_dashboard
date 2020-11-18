@@ -11,17 +11,18 @@ const set_dark_theme = function() {
     body.style.backgroundColor = "hsl(230, 17%, 14%)";
     body.style.color = "hsl(228, 34%, 66%)";
 
+    document.querySelector("#top-bg-pattern").style.backgroundColor = "hsl(232, 19%, 15%)";
+
     let box_background = document.querySelectorAll(".followers-box, .today-box, #overlay"); 
     box_background.forEach(element => {
         element.style.backgroundColor = "hsl(228, 28%, 20%)";
         element.addEventListener("mouseover", event => {
-            element.style.backgroundColor = "hsl(228, 17%, 20%)";
+            element.style.backgroundColor = "hsl(228, 17%, 18%)";
         });
         element.addEventListener("mouseleave", event => {
             element.style.backgroundColor = "hsl(228, 28%, 20%)";
         });
     });
-
 
     document.querySelectorAll(".number, .bottom-row>span, #grid-container h1").forEach(element => {
         element.style.color = "#fff"
@@ -33,23 +34,20 @@ const set_dark_theme = function() {
     switch_box.style.backgroundImage = "linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%))";
     switch_box.style.backgroundColor = "none";
     switch_box.lastElementChild.style.backgroundColor = "hsl(228, 28%, 20%)";
-
-    document.querySelectorAll("#overlay:hover, .followers-box:hover, .today-box:hover").forEach(element => {
-        element.style.backgroundColor = "hsl(228, 17%, 20%)";
-    });
-
 };
 
 const set_light_theme = function() {
     let body = document.querySelector("body");
     body.style.backgroundColor = "hsl(0, 0%, 100%)";
     body.style.color = "hsl(228, 12%, 44%)";
+
+    document.querySelector("#top-bg-pattern").style.backgroundColor = "hsl(225, 100%, 98%)";
     
     let box_background = document.querySelectorAll(".followers-box, .today-box, #overlay");
     box_background.forEach(element => {
         element.style.backgroundColor = "hsl(227, 47%, 96%)";
         element.addEventListener("mouseover", event => {
-            element.style.backgroundColor = "hsl(227, 100%, 96%)";
+            element.style.backgroundColor = "hsl(227, 47%, 90%)";
         });
         element.addEventListener("mouseleave", event => {
             element.style.backgroundColor = "hsl(227, 47%, 96%)";
