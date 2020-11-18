@@ -3,15 +3,26 @@ theme_switch.addEventListener("change", e => {
     theme_switch.checked ? set_light_theme() : set_dark_theme();
 });
 
+
+
+
 const set_dark_theme = function() {
     let body = document.querySelector("body");
     body.style.backgroundColor = "hsl(230, 17%, 14%)";
     body.style.color = "hsl(228, 34%, 66%)";
 
-    document.querySelectorAll(".followers-box, .today-box, #overlay").forEach(element => {
+    let box_background = document.querySelectorAll(".followers-box, .today-box, #overlay"); 
+    box_background.forEach(element => {
         element.style.backgroundColor = "hsl(228, 28%, 20%)";
+        element.addEventListener("mouseover", event => {
+            element.style.backgroundColor = "hsl(228, 17%, 20%)";
+        });
+        element.addEventListener("mouseleave", event => {
+            element.style.backgroundColor = "hsl(228, 28%, 20%)";
+        });
     });
-     
+
+
     document.querySelectorAll(".number, .bottom-row>span, #grid-container h1").forEach(element => {
         element.style.color = "#fff"
     });
@@ -34,8 +45,15 @@ const set_light_theme = function() {
     body.style.backgroundColor = "hsl(0, 0%, 100%)";
     body.style.color = "hsl(228, 12%, 44%)";
     
-    document.querySelectorAll(".followers-box, .today-box, #overlay").forEach(element => {
+    let box_background = document.querySelectorAll(".followers-box, .today-box, #overlay");
+    box_background.forEach(element => {
         element.style.backgroundColor = "hsl(227, 47%, 96%)";
+        element.addEventListener("mouseover", event => {
+            element.style.backgroundColor = "hsl(227, 100%, 96%)";
+        });
+        element.addEventListener("mouseleave", event => {
+            element.style.backgroundColor = "hsl(227, 47%, 96%)";
+        });
     });
 
     document.querySelectorAll(".number, .bottom-row>span, #grid-container h1").forEach(element => {
@@ -48,8 +66,4 @@ const set_light_theme = function() {
     switch_box.style.backgroundImage = "none";
     switch_box.style.backgroundColor = "hsl(230, 22%, 74%)";
     switch_box.lastElementChild.style.backgroundColor = "hsl(225, 100%, 98%)";
-
-    document.querySelectorAll("#overlay:hover, .followers-box:hover, .today-box:hover").forEach(element => {
-        element.style.backgroundColor = "hsl(227, 70%, 96%)";
-    });
 };
