@@ -3,9 +3,6 @@ theme_switch.addEventListener("change", e => {
     theme_switch.checked ? set_light_theme() : set_dark_theme();
 });
 
-
-
-
 const set_dark_theme = function() {
     let body = document.querySelector("body");
     body.style.backgroundColor = "hsl(230, 17%, 14%)";
